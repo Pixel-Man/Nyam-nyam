@@ -1,0 +1,17 @@
+@mixin background-image-retina($file, $type, $width, $height) {
+  background-image: url($file + '.' + $type);
+
+  @media (-webkit-min-device-pixel-ratio: 2) {
+    & {
+      background-image: url($file + '@2x.' + $type);
+      -webkit-background-size: $width $height;
+    }
+  }
+
+  @media (-webkit-min-device-pixel-ratio: 3) {
+    & {
+      background-image: url($file + '@3x.' + $type);
+      -webkit-background-size: $width $height;
+    }
+  }
+}
