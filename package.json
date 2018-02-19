@@ -1,0 +1,32 @@
+{
+  "name": "Nyam-nyam",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "index.js",
+  "repository": "https://github.com/Pixel-Man/Nyam-nyam",
+  "author": "PixelMan <vitaliyksyu@gmail.com>",
+  "license": "MIT",
+
+  "devDependencies": {
+    "browser-sync": "latest",
+    "gulp": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-cssbeautify": "latest",
+    "gulp-cssnano": "latest",
+    "gulp-imagemin": "latest",
+    "gulp-plumber": "latest",
+    "gulp-rename": "latest",
+    "gulp-rigger": "latest",
+    "gulp-sass": "latest",
+    "gulp-strip-css-comments": "latest",
+    "gulp-uglify": "latest",
+    "gulp-watch": "latest",
+    "rimraf": "latest",
+    "run-sequence": "latest",
+    "pixel-glass": "latest"
+  },
+  "scripts": {
+    "build": "gulp build",
+    "start": "gulp"
+  }
+}
