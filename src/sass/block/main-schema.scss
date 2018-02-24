@@ -1,0 +1,176 @@
+.main-schema {
+  @include container-fluid;
+  padding: 0;
+  padding-top: 24px;
+  padding-bottom: 32px;
+
+  @include respond-to('papa-bear') {
+    padding-top: 60px;
+    padding-bottom: 65px;
+  }
+}
+
+.main-schema__title {
+  @extend .main-timer__title;
+
+  @include respond-to('papa-bear') {
+    font-size: 40px;
+  }
+}
+
+.main-schema__list {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  list-style: none;
+
+  @include respond-to('papa-bear') {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.main-schema__item {
+  margin-top: 23px;
+  width: 100%;
+
+  @include respond-to('papa-bear') {
+    margin-top: 50px;
+    width: 262px;
+  }
+}
+
+.main-schema__item-description {
+  position: relative;
+  margin: 0;
+  padding: 0 53px;
+  padding-top: 100px;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 78px;
+    height: 78px;
+    background: transparent url("../img/sprite/sprites.png") no-repeat -8px -8px;
+    transform: translateX(-50%);
+  }
+
+  @include respond-to('papa-bear') {
+    padding: 0;
+    padding-top: 108px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 62px;
+      left: 208px;
+      width: 38%;
+      height: 30px;
+      background: url(../img/sprite/arrow-right.png) no-repeat;
+      background-size: contain;
+    }
+  }
+}
+
+.main-schema__item-description--2 {
+  &::before {
+    width: 78px;
+    height: 78px;
+    background-position: -102px -8px;
+  }
+}
+
+.main-schema__item-description--3 {
+  &::before {
+    width: 78px;
+    height: 77px;
+    background-position: -196px -8px;
+  }
+}
+
+.main-schema__item-description--4 {
+  &::before {
+    width: 78px;
+    height: 78px;
+    background-position: -196px -101px;
+  }
+
+  &::after {
+    display: none;
+  }
+}
+
+.main-schema__description {
+  margin: 0;
+  margin-top: 8px;
+  padding: 0 15px;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 36px;
+  text-transform: uppercase;
+  text-align: center;
+
+  b {
+    font-weight: 500;
+    color: #f8a10e;
+  }
+
+  span {
+    display: inline-block;
+    margin-top: 12px;
+    font: inherit;
+  }
+
+  @include respond-to('papa-bear') {
+    margin-top: 18px;
+    font-size: 30px;
+
+    span {
+      margin-top: 15px;
+    }
+  }
+}
+
+.main-schema__description-tel {
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 34px;
+  text-align: center;
+  color: #61c332;
+
+  @include respond-to('papa-bear') {
+    margin-top: 7px;
+    font-size: 36px;
+  }
+}
+
+aside[id="slidr-schema-control"] .slidr-control.right::after,
+aside[id="slidr-schema-control"] .slidr-control.left::after {
+  width: 20px !important;
+  height: 20px !important;
+  border: 1px solid #ffffff !important;
+  transform: translateX(-50%);
+}
+
+aside[id="slidr-schema-control"] .slidr-control.right::after {
+  right: 10px !important;
+  border-top-color: transparent !important;
+  border-left-color: transparent !important;
+  transform: rotate(-45deg);
+}
+
+aside[id="slidr-schema-control"] .slidr-control.left::after {
+  left: 10px !important;
+  border-top-color: transparent !important;
+  border-right-color: transparent !important;
+  transform: rotate(45deg);
+}

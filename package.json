@@ -6,7 +6,6 @@
   "repository": "https://github.com/Pixel-Man/Nyam-nyam",
   "author": "PixelMan <vitaliyksyu@gmail.com>",
   "license": "MIT",
-
   "devDependencies": {
     "browser-sync": "latest",
     "gulp": "latest",
@@ -21,12 +20,15 @@
     "gulp-strip-css-comments": "latest",
     "gulp-uglify": "latest",
     "gulp-watch": "latest",
+    "pixel-glass": "^1.0.13",
     "rimraf": "latest",
-    "run-sequence": "latest",
-    "pixel-glass": "latest"
+    "run-sequence": "latest"
   },
   "scripts": {
     "build": "gulp build",
     "start": "gulp"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.0"
   }
 }

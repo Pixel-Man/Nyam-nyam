@@ -1,9 +1,10 @@
 body {
   margin: 0;
   padding: 0;
-  font-size: 18px;
-  line-height: 27px;
-  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  font-family: "Roboto", sans-serif;
   color: #000;
   font-style: normal;
   background-color: #fff;
@@ -14,30 +15,50 @@ img {
   height: auto;
 }
 
+input[placeholder] {
+  font-style: italic;
+}
+
+input::-moz-placeholder {
+  font-style: italic;
+}
+
+input:-moz-placeholder {
+  font-style: italic;
+}
+
+input:-ms-input-placeholder {
+  font-style: italic;
+}
+
 .btn {
   display: inline-block;
   box-sizing: border-box;
-  padding: 13px 30px;
+  padding: 8px 16px;
   font: inherit;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 24px;
-  color: #000;
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-  outline: 1px solid #e5ddd5;
+  background-color: #61c332;
+  border-radius: 20px;
+  outline: none;
   cursor: pointer;
-  transition: 0.2s ease-in-out;
+  transition: 0.1s ease-in-out;
 
-  &:hover {
-    outline-color: #d5c9bd;
+  &:hover,
+  &:focus {
+    box-shadow: 0 2px 2px #52a828;
   }
 
   &:active {
-    color: #958c84;
-    background-color: #d5c9bd;
-    outline: none;
+    opacity: 0.7;
+  }
+
+  @include respond-to('papa-bear') {
+    font-size: 18px;
   }
 }
 

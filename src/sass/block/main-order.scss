@@ -1,0 +1,132 @@
+.main-order {
+  padding-top: 15px;
+  padding-bottom: 20px;
+  background-color: #f5f5f5;
+
+  @include respond-to('papa-bear') {
+    padding-top: 52px;
+    padding-bottom: 46px;
+    @include background-image-retina('../img/order_menu-bg', 'jpg', auto, auto);
+    background-repeat: no-repeat;
+    background-position: center 0;
+  }
+}
+
+.main-order__wrapper {
+  @include container-fluid;
+}
+
+.main-order__title {
+  @extend .main-timer__title;
+
+  @include respond-to('papa-bear') {
+    font-size: 40px;
+  }
+}
+
+.main-order__form {
+  text-align: center;
+
+  @include respond-to('papa-bear') {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 31px auto 0;
+    width: 750px;
+  }
+}
+
+.main-order__form-label {
+  display: none;
+}
+
+.main-order__form-input {
+  box-sizing: border-box;
+  margin-top: 13px;
+  padding: 19px 19px;
+  width: 100%;
+  border: 1px solid #f8a10e;
+
+  &:focus {
+    outline: 1px solid #f8a10e;
+  }
+
+  @include respond-to('papa-bear') {
+    order: 1;
+    margin-top: 20px;
+    width: 360px;
+  }
+}
+
+.main-order__form-input ~ .main-order__form-input {
+  margin-top: 20px;
+
+  @include respond-to('papa-bear') {
+    margin-top: 20px;
+  }
+}
+
+.main-order__form-input--checkbox {
+  display: none;
+}
+
+.main-order__form-label--checkbox {
+  position: relative;
+  display: block;
+  margin-top: 5px;
+  padding-left: 20px;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: left;
+  color: #484848;
+
+  a {
+    color: #484848;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #f8a10e;
+  }
+
+  @include respond-to('papa-bear') {
+    order: 3;
+  }
+}
+
+.main-order__form-input--checkbox:checked + .main-order__form-label--checkbox::before {
+  background-color: #f8a10e;
+}
+
+.main-order__btn {
+  border: none;
+  margin-top: 20px;
+  padding: 11px 70px;
+  background-color: #f8a10e;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 2px 2px #f8a10e;
+  }
+
+  @include respond-to('papa-bear') {
+    order: 2;
+    width: 360px;
+    font-size: 24px;
+  }
+}

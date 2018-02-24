@@ -1,0 +1,114 @@
+.main-timer {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  @include background-image-retina('../img/order-bg', 'png', auto, auto);
+  background-repeat: no-repeat;
+  background-position: center -62px;
+
+  @include respond-to('papa-bear') {
+    padding-top: 39px;
+    padding-bottom: 53px;
+  }
+}
+
+.main-timer__wrapper {
+  @include container-fluid;
+  text-align: center;
+}
+
+.main-timer__title {
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 29px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #f8a10e;
+
+  @include respond-to('papa-bear') {
+    font-size: 36px;
+  }
+}
+
+.main-timer__timer {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-top: 14px;
+  max-width: 420px;
+  font-size: 20px;
+  color: #61c332;
+
+  div {
+    position: relative;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 78px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #61c332;
+    border-radius: 50%;
+  }
+
+  span {
+    align-self: center;
+    font-size: 40px;
+  }
+
+  @include respond-to('papa-bear') {
+    margin-top: 30px;
+
+    div {
+      width: 116px;
+      height: 116px;
+      font-size: 60px;
+      line-height: 116px;
+    }
+
+    span {
+      font-size: 60px;
+    }
+  }
+}
+
+.main-timer__timer-label {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-top: 7px;
+  max-width: 420px;
+
+  i {
+    display: inline-block;
+    width: 80px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 25px;
+    font-style: normal;
+    color: #000;
+  }
+
+  @include respond-to('papa-bear') {
+    margin-top: 16px;
+
+    i {
+      padding: 0 18px;
+      font-size: 24px;
+    }
+  }
+}
+
+.main-timer__btn {
+  margin-top: 14px;
+  padding: 8px 50px;
+
+  @include respond-to('papa-bear') {
+    margin-top: 36px;
+    padding: 13px 88px;
+  }
+}

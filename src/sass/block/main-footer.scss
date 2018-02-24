@@ -1,0 +1,169 @@
+.main-footer {
+  padding-top: 26px;
+  padding-bottom: 52px;
+  background-color: #f0f0f0;
+
+  @include respond-to('papa-bear') {
+    padding-top: 59px;
+    padding-bottom: 96px;
+  }
+}
+
+.main-footer__wrapper {
+  @include container-fluid;
+
+  @include respond-to('papa-bear') {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.main-footer__title {
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 27px;
+}
+
+.main-footer__address {
+  position: relative;
+  margin: 0;
+  margin-top: 23px;
+  padding: 0;
+  padding-left: 44px;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 25px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: 4px;
+    width: 20px;
+    height: 33px;
+    background: transparent url("../img/sprite/sprites.png") no-repeat -329px -92px;
+  }
+
+  @include respond-to('papa-bear') {
+    font-size: 24px;
+
+    br {
+      display: none;
+    }
+  }
+}
+
+.main-footer__mail {
+  position: relative;
+  display: block;
+  margin: 0;
+  margin-top: 15px;
+  padding: 0;
+  padding-left: 44px;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 25px;
+  color: #000;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    width: 23px;
+    height: 15px;
+    background: transparent url("../img/sprite/sprites.png") no-repeat -290px -92px;
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+
+  @include respond-to('papa-bear') {
+    margin-top: 21px;
+    font-size: 24px;
+  }
+}
+
+.main-footer__right-coll {
+  @include respond-to('papa-bear') {
+    margin-top: 29px;
+    text-align: right;
+  }
+}
+
+.main-footer__tel {
+  position: relative;
+  display: block;
+  margin: 0;
+  margin-top: 20px;
+  padding: 0;
+  padding-left: 44px;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 25px;
+  text-decoration: none;
+  color: #000;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    width: 24px;
+    height: 24px;
+    background: transparent url("../img/sprite/sprites.png") no-repeat -365px -92px;
+  }
+
+  @include respond-to('papa-bear') {
+    font-size: 24px;
+
+    &::before {
+      top: 2px;
+      left: 20px;
+    }
+  }
+}
+
+.main-footer__skype {
+  position: relative;
+  display: block;
+  margin: 0;
+  margin-top: 15px;
+  padding: 0;
+  padding-left: 44px;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 25px;
+  text-decoration: none;
+  color: #000;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    width: 32px;
+    height: 32px;
+    background: transparent url("../img/sprite/sprites.png") no-repeat -8px -141px;
+  }
+
+  @include respond-to('papa-bear') {
+    margin-top: 21px;
+    font-size: 24px;
+
+    &::before {
+      top: 2px;
+      left: 98px;
+    }
+  }
+}
+

@@ -1,0 +1,84 @@
+.popup-order {
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.popup-order__wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 10010;
+  padding: 25px 15px;
+  width: percentage(945/1140);
+  @include background-image-retina('../img/popup_order-bg', 'png', auto, auto);
+  background-color: #f0f0f0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 0;
+  transform: translate(-50%, -50%);
+  cursor: default;
+}
+
+.popup-order {
+  .main-order {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 0;
+    background-image: none;
+    background-color: rgba(255, 255, 255, 0.75);
+    background-image: none;
+  }
+
+  .main-order__btn--closed {
+    background-color: rgba(160, 160, 160, 0.56);
+
+    &:active {
+      box-shadow: none;
+    }
+
+    @include respond-to('papa-bear') {
+      display: none;
+    }
+  }
+
+  .popup-order__btn-closed {
+    display: none;
+
+    @include respond-to('papa-bear') {
+      display: block;
+      position: absolute;
+      bottom: 99%;
+      z-index: 10100;
+      left: 100%;
+      width: 29px;
+      height: 29px;
+      font-size: 20px;
+      line-height: 29px;
+      color: #fff;
+      background-color: #f8a10e;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: #f9aa00;
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
+  }
+}
+
+.popup-order--closed {
+  display: none;
+}
