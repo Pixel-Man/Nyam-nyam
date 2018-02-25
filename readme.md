@@ -1,6 +1,7 @@
-# Проект «Nyam-nyam»
+# Проект «Nam-nyam»
 
 * Вёрстка: [Виталий Дубинка (Pixel-Man)](https://github.com/Pixel-Man).
+* С реализованным проектом можно ознакомится по [ссылке](https://pixel-man.github.io/Nam-nyam/).
 
 ## Описание
 
